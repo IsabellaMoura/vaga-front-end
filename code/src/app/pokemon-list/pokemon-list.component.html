@@ -1,0 +1,143 @@
+<div class="pokemon-grid">
+    <div class="container mt-5">
+        <h1 class="text-center font-weight-normal">Pesquise sobre seu pokémon preferido</h1>
+    </div>
+    <div class="container mt-4 d-flex mb-5"  >
+        <div class="row" >
+
+            <div class="col-md-4 mt-5">
+                <div class="card" *ngFor="let pokemon of pokemons" >
+                    <img [src]="pokemon.sprites.front_default" alt="Pokomon" class="card-img-top w-100"/>
+                    <div class="card-body">
+                        <h2 class="card-title">{{ pokemon.name}}</h2>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">
+                                <b>Type:</b> {{pokemon.types[0].type.name}}
+                            </p>
+                            <p class="card-text mr-4 text-sucess">
+                                <b>Height:</b> {{ pokemon.height }}
+                            </p>
+                            <p class="card-text">
+                                <b>Health:</b> {{pokemon.stats[0].base_stat}}
+                            </p>
+                            <p class="card-text">
+                                <b>Attack Power:</b> {{pokemon.stats[1].base_stat}}
+                            </p>
+
+                        </div>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="modal">Mais</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mt-5">
+                <div class="card">
+                    <img src="" class="card-img-top w-100"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Pikachu</h2>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Lis harum sed nihil fugit provident voluptas quia doloribus quibusdam?</p>
+                            <p class="card-text mr-4 text-sucess">02292920</p>
+
+                        </div>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="modal">Mais</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mt-5">
+                <div class="card">
+                    <img src="" class="card-img-top w-100"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Pikachu</h2>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Lis harum sed nihil fugit provident voluptas quia doloribus quibusdam?</p>
+                            <p class="card-text mr-4 text-sucess">02292920</p>
+
+                        </div>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="modal">Mais</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mt-5">
+                <div class="card">
+                    <img src="" class="card-img-top w-100"/>
+                    <div class="card-body">
+                        <h2 class="card-title">Pikachu</h2>
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text">Lis harum sed nihil fugit provident voluptas quia doloribus quibusdam?</p>
+                            <p class="card-text mr-4 text-sucess">02292920</p>
+
+                        </div>
+                        <a href="#" class="card-link" data-toggle="modal" data-target="#modalId">Mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<!-- Modal Code -->
+<div class="modal fade" id="modalId">
+<div class="modal-dialog bg-sucess">
+    <div class="modal-content" style="transform: scaleX(1.4);">
+    <div class="modal-header pb-2">
+        <h1 class="font-weight-light ml-4">Descrição</h1>
+        <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row mt-2 p-3">
+            <div class="col-md-6">
+                <img src="" width="100%" height="200px" class="rounded"/>
+            </div>
+            <div class="col-md-6">
+                <h2 class="product-name"></h2>
+                <p style="box-sizing:border-box;" class="product_desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio debitis, ex perferendis reiciendis voluptatibus, commodi ut impedit doloremque veniam ab eveniet facilis dolores, ratione voluptate consequatur vitae illum sapiente dolorem.</p>
+                
+                <p>Poder: &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-star text-warning ml-2"></i>
+                    <i class="fa fa-star text-warning ml-2"></i>
+                    <i class="fa fa-star text-warning ml-2"></i>
+                    <i class="fa fa-star text-warning ml-2"></i>
+                    <i class="fa fa-star ml-2"></i>
+
+                </p>
+                <h4 class="product-price"></h4>
+                <button class="btn btn-sucess mt-2" style="width: 150px;">Adicione nos favoritos</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
+
+<script>
+    $(document).ready(function(){
+        $(".card-link").click(function(){
+        $(".rounded").attr("src",$(this).parent().siblings().attr("Src"));
+        $(".product_name").text($(this).siblings("h2").text());
+        $(".product_desc").text($(this).siblings("div").find("p:nth(0)").text());
+        $(".product_price").text($(this).siblings("div").find("p:nth(1)").text());
+        
+        });
+        $(window).resize(function(){
+            if($(window).width() <600){
+                $(".modal-content").css("transform", "scaleX(1)");
+            }
+            else{
+                $(".modal-content").css("transform", "scaleX(1.4)");
+
+            }
+    
+        });
+    });
+</script>
