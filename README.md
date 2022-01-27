@@ -1,4 +1,10 @@
-Teste de Frontend
+Desafio Finalizado
+
+![Captura de Tela (1)](https://user-images.githubusercontent.com/70759293/151407730-bde97564-7071-47b4-8fac-043f8ca19ccb.png)
+![Captura de Tela (2)](https://user-images.githubusercontent.com/70759293/151407742-c88d7c84-56ec-4da1-a13d-93af0c0bf889.png)
+![Captura de Tela (3)](https://user-images.githubusercontent.com/70759293/151407757-301bb2b4-ec00-4720-9a78-becf9bea0cbc.png)
+
+<!-- Teste de Frontend
 Olá Dev! Tudo bem?
 
 Nós estamos procurando profissionais organizados, que não saibam de tudo, porém que saibam pesquisar e aprender.
@@ -37,3 +43,4 @@ Só isso?
 Só! Mas se estiver motivado, tente preparar o projeto para ser executado e testado de maneira prática, usando alguma ferramenta que facilite isso (ex: npm, yarn, docker, etc...).
 
 Se preferir, pode publicá-lo em algum servidor de sites estáticos (ex: Firebase, Netlify...), esses exemplos são gratuitos, mas você pode usar um Cloud próprio também (ex: AWS, Digital Ocean, Linode...).
+ -->
